@@ -1,6 +1,16 @@
 import React from 'react';
+import ImageList from '@mui/material/ImageList';
+import ImageListItem from '@mui/material/ImageListItem';
 
 function Img() {
+    const itemData = [];
+    for (let i = 1; i <= 25; i++) {
+      itemData.push({
+        img: `https://raw.githubusercontent.com/Uri2803/love/main/img/img${i}.JPG`, // Đổi đường dẫn ở đây
+        title: `Image ${i}`,
+      });
+    }
+    
   return (
     <div>
       <h1>ComponentName</h1>
