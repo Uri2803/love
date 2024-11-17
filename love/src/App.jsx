@@ -35,35 +35,35 @@ const NAVIGATION = [
   {
     kind: 'divider',
   },
-  {
-    kind: 'header',
-    title: 'Analytics',
-  },
-  {
-    segment: 'reports',
-    title: 'Reports',
-    icon: <BarChartIcon />,
-    children: [
-      {
-        segment: 'sales',
-        title: 'Sales',
-        icon: <DescriptionIcon />,
-        to: '/reports/sales',
-      },
-      {
-        segment: 'traffic',
-        title: 'Traffic',
-        icon: <DescriptionIcon />,
-        to: '/reports/traffic',
-      },
-    ],
-  },
-  {
-    segment: 'integrations',
-    title: 'Integrations',
-    icon: <LayersIcon />,
-    to: '/integrations',
-  },
+  // {
+  //   kind: 'header',
+  //   title: 'Analytics',
+  // },
+  // {
+  //   segment: 'reports',
+  //   title: 'Reports',
+  //   icon: <BarChartIcon />,
+  //   children: [
+  //     {
+  //       segment: 'sales',
+  //       title: 'Sales',
+  //       icon: <DescriptionIcon />,
+  //       to: '/reports/sales',
+  //     },
+  //     {
+  //       segment: 'traffic',
+  //       title: 'Traffic',
+  //       icon: <DescriptionIcon />,
+  //       to: '/reports/traffic',
+  //     },
+  //   ],
+  // },
+  // {
+  //   segment: 'integrations',
+  //   title: 'Integrations',
+  //   icon: <LayersIcon />,
+  //   to: '/integrations',
+  // },
 ];
 
 const demoTheme = extendTheme({
