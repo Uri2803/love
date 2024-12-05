@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import bgImage from '../assets/img/bg.jpg';
 import imgTime from '../assets/img/imgTime.jpg'
 
-// Định nghĩa các div dùng styled-components
 const Container = styled.div`
   display: flex;
   height: 85vh;
@@ -35,8 +34,9 @@ const TimeBox = styled.div`
   flex: 1;
   background-image: url(${imgTime});
   background-size: cover;
-  color: #fdb382;
-  padding-top: 30px;
+   background-position: center;
+  padding: 25px;
+  color: #fba252;
   border-radius: 15px;
   width: 75%;
   min-height: 90%;
@@ -47,6 +47,7 @@ const TimeBox = styled.div`
   p {
     font-family: 'Pacifico', cursive;
     font-size: 1.75rem;
+    margin: 0;
   }
 
   @media (max-width: 768px) {

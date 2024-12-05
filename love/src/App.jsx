@@ -35,35 +35,35 @@ const NAVIGATION = [
   {
     kind: 'divider',
   },
-  // {
-  //   kind: 'header',
-  //   title: 'Analytics',
-  // },
-  // {
-  //   segment: 'reports',
-  //   title: 'Reports',
-  //   icon: <BarChartIcon />,
-  //   children: [
-  //     {
-  //       segment: 'sales',
-  //       title: 'Sales',
-  //       icon: <DescriptionIcon />,
-  //       to: '/reports/sales',
-  //     },
-  //     {
-  //       segment: 'traffic',
-  //       title: 'Traffic',
-  //       icon: <DescriptionIcon />,
-  //       to: '/reports/traffic',
-  //     },
-  //   ],
-  // },
-  // {
-  //   segment: 'integrations',
-  //   title: 'Integrations',
-  //   icon: <LayersIcon />,
-  //   to: '/integrations',
-  // },
+  {
+    kind: 'header',
+    title: 'Analytics',
+  },
+  {
+    segment: 'reports',
+    title: 'Reports',
+    icon: <BarChartIcon />,
+    children: [
+      {
+        segment: 'sales',
+        title: 'Sales',
+        icon: <DescriptionIcon />,
+        to: '/reports/sales',
+      },
+      {
+        segment: 'traffic',
+        title: 'Traffic',
+        icon: <DescriptionIcon />,
+        to: '/reports/traffic',
+      },
+    ],
+  },
+  {
+    segment: 'integrations',
+    title: 'Integrations',
+    icon: <LayersIcon />,
+    to: '/integrations',
+  },
 ];
 
 const demoTheme = extendTheme({
@@ -79,10 +79,15 @@ const demoTheme = extendTheme({
     },
   },
 });
+const BRANDING = {
+  title: '🐰 ❤️ 🐹',
+  logo: <img src={Logo} alt="Logo" style={{ width: 40, height: 40 }} />,
+};
 
 function App(props) {
   const { window } = props;
   const demoWindow = window ? window() : undefined;
+  
 
   return (
     <Router> 
@@ -90,28 +95,9 @@ function App(props) {
         navigation={NAVIGATION}
         theme={demoTheme}
         window={demoWindow}
+        branding={BRANDING}
       >
-     <DashboardLayout
-  logo={
-    <Stack direction="row" alignItems="center" sx={{ display: 'flex', alignItems: 'center' }}>
-      <svg width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <g mask="url(#a)">
-          <path d="M22.74 27.73v-7.6l6.64-3.79v7.6l-6.64 3.79Z" fill="#007FFF"></path>
-          <path d="M16.1 23.93v-7.59l6.64 3.8v7.59l-6.65-3.8Z" fill="#39F"></path>
-          <path d="m16.1 16.34 6.64-3.8 6.64 3.8-6.64 3.8-6.65-3.8Z" fill="#A5D8FF"></path>
-        </g>
-      </svg>
-      <span className="header-text" style={{ fontSize: '24px', fontWeight: 'bold', color: '#000' }}>
-        My Dashboard
-      </span>
-    </Stack>
-  }
-  sx={{
-    '& .MuiTypography-h6': {
-      display: 'none',
-    },
-  }}
->
+     <DashboardLayout>
 
           <PageContainer>
            
